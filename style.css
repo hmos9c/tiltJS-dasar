@@ -1,0 +1,95 @@
+body {
+  background-color: lightgray;
+  height: 1300px;
+}
+
+.elemen-box {
+  background-color: white;
+  border-radius: 10px;
+  height: 450px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.elemen-box:hover {
+  height: 500px;
+  width: auto;
+}
+
+.elemen-box::before {
+  content: "Lengendary";
+  position: absolute;
+  color: cyan;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  left: 10%;
+  top: 70%;
+  transform: translate3d(0, 0, 20px);
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.elemen-box:hover::before {
+  font-size: 4em;
+  left: 5%;
+  top: 75%;
+  transform: (-15%, -15%);
+  opacity: 1;
+}
+
+.elemen-box::after {
+  content: "CARD";
+  font-style: italic;
+  position: absolute;
+  color: darkorange;
+  font-size: 3em;
+  font-weight: bold;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, 0);
+  opacity: 0.8;
+  transition: 0.5s;
+  transform: translate3d(0, 0, 1px);
+}
+
+.elemen-box:hover::after {
+  font-size: 5em;
+  left: 40%;
+  top: 85%;
+  transform: (-15%, -15%);
+  opacity: 1;
+}
+
+.elemen-name {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: blueviolet;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  transition: 0.5s;
+  opacity: 0.8;
+  top: 0px;
+  transform: translate3d(0, 0, 50px);
+}
+
+.elemen-box:hover .elemen-name {
+  opacity: 1;
+  top: -40px;
+  font-size: 6em;
+}
+
+.elemen-img {
+  position: absolute;
+  max-width: 250px;
+  top: 20%;
+  left: 15%;
+  transition: 00.5s;
+  transform: translate3d(0, 0, 50px);
+}
+
+.elemen-box:hover .elemen-img {
+  max-width: 270px;
+}
